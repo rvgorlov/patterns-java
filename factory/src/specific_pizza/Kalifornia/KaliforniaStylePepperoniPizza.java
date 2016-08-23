@@ -8,9 +8,14 @@ import pizza_interface.Pizza;
 public class KaliforniaStylePepperoniPizza extends Pizza {
     public KaliforniaStylePepperoniPizza () {
         this.name = "Kalifornia Style Pepperoni Pizza";
-        this.dough = "Thin Crust Dough";
+        /*this.dough = "Thin Crust Dough";
         this.sauce = "Marina Souce";
 
-        toppings.add("Grated Reggino Pepperoni");
+        toppings.add("Grated Reggino Pepperoni");*/
+    }
+
+    public void prepare() {
+        System.out.printf("Preparing " + this.name);
+
     }
 }

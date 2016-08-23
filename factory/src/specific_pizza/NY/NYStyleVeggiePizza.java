@@ -8,9 +8,14 @@ import pizza_interface.Pizza;
 public class NYStyleVeggiePizza extends Pizza {
     public NYStyleVeggiePizza () {
         this.name = "NY Style Veggie Pizza";
-        this.dough = "Thin Crust Dough";
+        /*this.dough = "Thin Crust Dough";
         this.sauce = "Marina Souce";
 
-        toppings.add("Grated Reggino Veggie");
+        toppings.add("Grated Reggino Veggie");*/
+    }
+
+    public void prepare() {
+        System.out.printf("Preparing " + this.name);
+
     }
 }

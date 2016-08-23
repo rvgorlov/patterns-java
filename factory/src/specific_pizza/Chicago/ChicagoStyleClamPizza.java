@@ -8,9 +8,14 @@ import pizza_interface.Pizza;
 public class ChicagoStyleClamPizza extends Pizza {
     public ChicagoStyleClamPizza () {
         this.name = "Chicago Style Clam Pizza";
-        this.dough = "Thin Crust Dough";
-        this.sauce = "Marina Souce";
+        //this.dough = "Thin Crust Dough";
+        //this.sauce = "Marina Souce";
 
-        toppings.add("Grated Reggino Clam");
+        //toppings.add("Grated Reggino Clam");
+    }
+
+    public void prepare() {
+        System.out.printf("Preparing " + this.name);
+
     }
 }

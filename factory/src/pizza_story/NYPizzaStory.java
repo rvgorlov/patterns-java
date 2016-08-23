@@ -1,26 +1,41 @@
 package pizza_story;
 
+import IngridientFactory_interface.PizzaIngridienFactory;
+import factory.NYPizzaIngredientFactory;
 import pizza_interface.Pizza;
+import specific_pizza.CheezePizza;
+import specific_pizza.ClamPizza;
 import specific_pizza.NY.NYStyleCheezePizza;
 import specific_pizza.NY.NYStyleClamPizza;
 import specific_pizza.NY.NYStylePepperoniPizza;
 import specific_pizza.NY.NYStyleVeggiePizza;
+import specific_pizza.PepperoniPizza;
+import specific_pizza.VeggiePizza;
 
 
 /**
  * Created by rvgorlov on 11.07.16.
  */
 public class NYPizzaStory extends PizzaStory{
-     Pizza createPizza(String type){
+
+    protected Pizza createPizza(String type){
+        Pizza pizza = null;
+        PizzaIngridienFactory ingridienFactory = new NYPizzaIngredientFactory();
+
         if (type.equals("Cheeze")) {
-            return new NYStyleCheezePizza();
+            pizza = new CheezePizza(ingridienFactory);
+            pizza.setName("New York Style Cheese Pizza");
         } else if (type.equals("Pepperoni")) {
-            return new NYStylePepperoniPizza();
+            pizza = new PepperoniPizza(ingridienFactory);
+            pizza.setName("New York Style Cheese Pizza");
         } else if (type.equals("Clam")) {
-            return new NYStyleClamPizza();
+            pizza = new ClamPizza(ingridienFactory);
+            pizza.setName("New York Style Cheese Pizza");
         } else if (type.equals("Veggie")){
-            return new NYStyleVeggiePizza();
-        } else
-            return null;
+            pizza = new VeggiePizza(ingridienFactory);
+            pizza.setName("New York Style Cheese Pizza");
+        }
+
+        return pizza;
     }
 }

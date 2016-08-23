@@ -8,9 +8,14 @@ import pizza_interface.Pizza;
 public class NYStyleCheezePizza extends Pizza{
     public NYStyleCheezePizza () {
         this.name = "NY Style Cheeze Pizza";
-        this.dough = "Thin Crust Dough";
+        /*this.dough = "Thin Crust Dough";
         this.sauce = "Marina Souce";
 
-        toppings.add("Grated Reggino Cheeze");
+        toppings.add("Grated Reggino Cheeze");*/
+    }
+
+    public void prepare() {
+        System.out.printf("Preparing " + this.name);
+
     }
 }

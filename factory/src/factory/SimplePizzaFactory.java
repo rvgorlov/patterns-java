@@ -5,11 +5,13 @@ import specific_pizza.ClamPizza;
 import specific_pizza.PepperoniPizza;
 import specific_pizza.VeggiePizza;
 
+
+
 /**
  * Created by rvgorlov on 11.07.16.
  */
 public class SimplePizzaFactory {
-    public Pizza createPizza(String type) {
+    /*public Pizza createPizza(String type) {
         Pizza pizza = null;
 
         if (type.equals("Cheeze")) {
@@ -22,5 +24,5 @@ public class SimplePizzaFactory {
             pizza = new VeggiePizza();
         }
         return pizza;
-    }
+    }*/
 }
