@@ -2,7 +2,7 @@
  * Created by rvgorlov on 24.08.16.
  */
 public class Singleton {
-    private static Singleton uniqueInstance;
+    private volatile static Singleton uniqueInstance;
     private int number;
 
     private Singleton () {
@@ -11,7 +11,11 @@ public class Singleton {
 
     public static Singleton getInstance () {
         if (uniqueInstance == null) {
-            uniqueInstance = new Singleton();
+            synchronized (Singleton.class) {
+                if (uniqueInstance == null) {
+                    uniqueInstance = new Singleton();
+                }
+            }
         }
         return uniqueInstance;
     }
